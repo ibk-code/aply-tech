@@ -1,0 +1,21 @@
+.md {
+  height: 45px;
+  min-width: 110px;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.sm {
+  height: 42px;
+  min-width: 110px;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.btn {
+  color: var(--aply-blue);
+  background: transparent;
+  border: 2px solid var(--aply-blue);
+  border-radius: 4px;
+  font-family: "IBM Plex Sans", sans-serif;
+}

@@ -1,0 +1,9 @@
+.pills {
+  min-height: 30px;
+  background: rgba(83, 143, 183, 0.2);
+  border-radius: 18px;
+  padding: 0.5rem 0.8rem;
+  color: #1d338e;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
