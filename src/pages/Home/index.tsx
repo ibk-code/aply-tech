@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aply Schools</title>
+        <title>Applyi Schools</title>
       </Head>
       <header>
         <SkipToContent content="Skip to content" section="main" />
