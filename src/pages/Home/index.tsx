@@ -1,4 +1,5 @@
 // ------------ import external dependencies -------------
+import { useState } from "react";
 import Head from "next/head";
 
 // ------------ import internal dependencies -----------
@@ -9,6 +10,9 @@ import Pills from "@/components/Pills";
 import styles from "./style.module.css";
 
 export default function Home() {
+  // ------ state component managers ------
+  const [open, setOpen] = useState(true);
+
   const tags = [
     "Pre-Nursery",
     "Nursery",
@@ -148,59 +152,65 @@ export default function Home() {
             <div className={`${styles.contentWrapper} mt-18`}>
               <div className={styles.keyInformation}>
                 <h3>Key Information</h3>
-                <img src="/down.svg" alt="Down Svg" />
+                <img
+                  src="/down.svg"
+                  alt="Down Svg"
+                  onClick={() => setOpen(!open)}
+                />
               </div>
 
-              <div className={styles.detailWrapper}>
-                <div className={styles.schoolDetail}>
-                  <span>Founded</span>
-                  <span>2015</span>
+              {open && (
+                <div className={styles.detailWrapper}>
+                  <div className={styles.schoolDetail}>
+                    <span>Founded</span>
+                    <span>2015</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Ownership</span>
+                    <span>Private</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Gender</span>
+                    <span>Boys & Girls</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Faith Affilation</span>
+                    <span>Christian</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Scholarship</span>
+                    <span>No</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Student Population</span>
+                    <span>47</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Teaching Staff</span>
+                    <span>10</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Non-Teaching Staff</span>
+                    <span>5</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Special Need</span>
+                    <span>Yes</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>Curriculum</span>
+                    <span>National Curriculum of England & Wales</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span>School Fees Discount</span>
+                    <span>Upfront Yearly Payment Discount</span>
+                  </div>
+                  <div className={styles.schoolDetail}>
+                    <span></span>
+                    <span>Siblings Discount</span>
+                  </div>
                 </div>
-                <div className={styles.schoolDetail}>
-                  <span>Ownership</span>
-                  <span>Private</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Gender</span>
-                  <span>Boys & Girls</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Faith Affilation</span>
-                  <span>Christian</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Scholarship</span>
-                  <span>No</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Student Population</span>
-                  <span>47</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Teaching Staff</span>
-                  <span>10</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Non-Teaching Staff</span>
-                  <span>5</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Special Need</span>
-                  <span>Yes</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>Curriculum</span>
-                  <span>National Curriculum of England & Wales</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span>School Fees Discount</span>
-                  <span>Upfront Yearly Payment Discount</span>
-                </div>
-                <div className={styles.schoolDetail}>
-                  <span></span>
-                  <span>Siblings Discount</span>
-                </div>
-              </div>
+              )}
             </div>
 
             {/* <div className={styles.contentWrapper}>

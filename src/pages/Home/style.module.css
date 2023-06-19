@@ -246,6 +246,10 @@
   /* padding-top: 1rem; */
 }
 
+.keyInformation img {
+  cursor: pointer;
+}
+
 .detailWrapper {
   max-width: 480px;
   margin-top: 2rem;
